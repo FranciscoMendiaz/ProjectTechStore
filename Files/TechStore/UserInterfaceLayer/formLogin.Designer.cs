@@ -93,6 +93,7 @@
             lnkSingUp.TabIndex = 5;
             lnkSingUp.TabStop = true;
             lnkSingUp.Text = "¿No tienes cuenta? Regístrate\r\n";
+            lnkSingUp.LinkClicked += lnkSingUp_LinkClicked;
             // 
             // txtEmail
             // 
@@ -113,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(416, 326);
+            ClientSize = new Size(444, 373);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
             Controls.Add(lnkSingUp);

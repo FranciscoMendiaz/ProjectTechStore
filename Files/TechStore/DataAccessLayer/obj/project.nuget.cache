@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J7Coqg3prxtWrI2+FDWY95tzK9+tozLGZVsAh7NjXxDEyFManGLFB9hw8wAjrcf+ApYG4utfPaha2lrXMZeRbA==",
+  "dgSpecHash": "Y1dfEds9ARnqjOJAuLC+v9Wg9M2JHVSfrU3VHRZw2RYdRqg80ElKCgzCb2bU71Jb25hYnjIFUWBMq8nWVQJH/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francisco\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Francisco\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

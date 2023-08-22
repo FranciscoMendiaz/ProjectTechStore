@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
       "projectName": "EntitiesLayer",
-      "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
+      "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
       "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\obj\\",
+      "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",

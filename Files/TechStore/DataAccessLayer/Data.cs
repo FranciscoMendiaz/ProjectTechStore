@@ -1,116 +1,64 @@
 ﻿using EntitiesLayer;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
     public class Data
     {
-       
-        private SqlConnection myConn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Tech-Store;Data Source=DESKTOP-SLFI33K\\SQLEXPRESS");
+        private SqlConnection myConn=null;
+        private static Data instance;
+        private int connected = 0;
 
-        #region GET USER
-        public User getUser(string email, string password)
+        // Singleton pattern implementation:
+
+        public static Data getInstance()
         {
-            int idUserRole =0;
-            User user = new User();
-            try { 
-                myConn.Open();
-
-                string query = @"SELECT email, password, first_name, last_name, address, id_user_role FROM users 
-                                WHERE (users.email = @Email AND users.password = @Password )";
-
-                
-
-                SqlParameter mail = new SqlParameter("@Email", email);
-                SqlParameter pass = new SqlParameter("@Password", password);
-
-                SqlCommand command = new SqlCommand(query, myConn);
-
-                command.Parameters.Add( mail );
-                command.Parameters.Add( pass );
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    user.Email = reader["email"].ToString();
-                    user.Password = reader["password"].ToString();
-                    user.LastName = reader["last_name"].ToString();
-                    user.FirstName = reader["first_name"].ToString();
-                    user.Address = reader["address"].ToString();
-                    idUserRole = int.Parse(reader["id_user_role"].ToString());
-                    
-
-                }
-                
-                else
-                {
-                    user = null;
-                }
-
+            if (instance == null)
+            {
+                instance = new Data();
             }
-            catch (Exception) { throw; }
-            
-            finally { myConn.Close();}
-
-            if (user != null) { user.Role = this.getRole(idUserRole); }
-            
-            return user;
-
+            return instance;
         }
 
-        #endregion
-
-        #region GET ROLE
-        public UserRole getRole(int idRole)
+        private Data()
         {
-            UserRole role = new UserRole();
+            myConn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Tech-Store;Data Source=DESKTOP-SLFI33K\\SQLEXPRESS;MultipleActiveResultSets=true");
+        }
+
+        public SqlConnection getMyConn()
+        {
             try
             {
-                myConn.Open();
-
-                string query = @"SELECT id, description FROM user_roles
-                                WHERE (user_roles.id = @Id)";
-
-                SqlParameter anId = new SqlParameter("@Id", idRole);
-                
-
-                SqlCommand command = new SqlCommand(query, myConn);
-
-                command.Parameters.Add(anId);
-                
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                if (myConn == null || myConn.State == ConnectionState.Closed)
                 {
-                    role.Id = int.Parse(reader["id"].ToString());
-                    role.Description = reader["description"].ToString();
-                    
+                    myConn.Open();
+                    connected = 0;
                 }
-
-                else
-                {
-                    role = null;
-                }
-
             }
-            catch (Exception) { throw; }
-
-            finally { myConn.Close(); }
-
-            return role;
-
+            catch (Exception)
+            {
+                throw;
+            }
+            connected++; ;
+            return myConn;
         }
 
-        #endregion
-
-
-
-
-
-
-
-
+        public void releaseMyConn()
+        {
+            connected--;
+            try
+            {
+                if (connected <= 0)
+                {
+                    myConn.Close();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

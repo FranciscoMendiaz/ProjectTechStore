@@ -14,11 +14,7 @@
 
         public UserRole Role { get; set; }
 
-
-
-
     }
-
 
     public class UserRole
     {
@@ -27,8 +23,5 @@
         public string Description { get; set; }
 
     }
-
-
-
 
 }

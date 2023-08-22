@@ -1,25 +1,38 @@
 ﻿using DataAccessLayer;
 using EntitiesLayer;
+using System.Data;
 
 namespace BusinessLogicLayer
 {
     public class BusinessLogic
     {
-        private Data data;
+        private DataUser dataUser;
+        private DataUserRole dataUserRole;
 
-        public BusinessLogic() { data = new Data(); }
-
-        public User validateUser (string email, string password){
-        
-            User user = new User();
-            user = data.getUser(email, password);
-            return user;
-        
+        public BusinessLogic() 
+        {   
+            dataUser = new DataUser();
+            dataUserRole = new DataUserRole();
         }
 
+        public User validateUser (string email, string password)
+        {
+            User user = new User();
+            user = dataUser.validateUser(email, password);
+            return user;
+        }
 
+        public User getOne(string email)
+        {
+            User user = new User();
+            user = dataUser.getOne(email);
+            return user;
+        }
 
-
+        public void createUser(User user)
+        {
+            dataUser.createUser(user);
+        }
 
     }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {}
+    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\BusinessLogicLayer\\obj\\",
+        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
-                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj"
+              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
+                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
-                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj"
+              "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
+                "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj"
               }
             }
           }
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
+    "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
         "projectName": "EntitiesLayer",
-        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
+        "projectPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\EntitiesLayer.csproj",
         "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\TechStore\\EntitiesLayer\\obj\\",
+        "outputPath": "C:\\Users\\Francisco\\OneDrive\\Documentos\\ProjectTechStore\\Files\\TechStore\\EntitiesLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
