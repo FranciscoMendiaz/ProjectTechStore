@@ -157,6 +157,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(444, 373);
+            ControlBox = false;
             Controls.Add(btnCancel);
             Controls.Add(btnCreateAccount);
             Controls.Add(label6);

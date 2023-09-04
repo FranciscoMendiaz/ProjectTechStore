@@ -17,7 +17,7 @@ namespace DataAccessLayer
             
             User user = new User();
             DataUserRole role = new DataUserRole();
-            int idUserRole = 0;
+            
 
             try
             {
@@ -110,8 +110,6 @@ namespace DataAccessLayer
         #region CREATE USER
         public void createUser(User user)
         {
-
-            int idUserRole = 0;
 
             try
             {

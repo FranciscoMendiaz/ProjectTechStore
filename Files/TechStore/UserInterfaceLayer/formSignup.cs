@@ -30,21 +30,17 @@ namespace UserInterfaceLayer
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text!=string.Empty && txtAdress.Text != string.Empty && txtFirstName.Text != string.Empty 
-                && txtLastName.Text!= string.Empty && txtPassword.Text!=string.Empty) 
+            if (txtEmail.Text != string.Empty && txtAdress.Text != string.Empty && txtFirstName.Text != string.Empty
+                && txtLastName.Text != string.Empty && txtPassword.Text != string.Empty)
             {
                 getOne();
             }
-        
+
             else
             {
                 MessageBox.Show("Debe ingresar todos los campos solicitados", "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        
         }
-
-
-
         private void getOne()
         {
             user = logic.getOne(txtEmail.Text);
@@ -69,7 +65,7 @@ namespace UserInterfaceLayer
             user.Address = txtAdress.Text;
             logic.createUser(user);
             MessageBox.Show("Cuenta de Usuario creada correctamente", "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.clearTxts();
+            clearTxts();
         }
 
         private void clearTxts()
@@ -77,11 +73,11 @@ namespace UserInterfaceLayer
             txtEmail.Text = string.Empty;
             txtPassword.Text = string.Empty;
             txtAdress.Text = string.Empty;
-            txtFirstName.Text = string.Empty;   
+            txtFirstName.Text = string.Empty;
             txtLastName.Text = string.Empty;
         }
 
-      
+
 
 
 

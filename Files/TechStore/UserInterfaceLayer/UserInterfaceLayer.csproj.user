@@ -1,7 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="OwnerScreen\formAddPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerBrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerPaymentTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OwnerScreen\formOwnerProducts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="formSignup.cs">

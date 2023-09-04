@@ -8,11 +8,13 @@ namespace BusinessLogicLayer
     {
         private DataUser dataUser;
         private DataUserRole dataUserRole;
+        private DataPaymentType dataPaymentType;
 
         public BusinessLogic() 
         {   
             dataUser = new DataUser();
             dataUserRole = new DataUserRole();
+            dataPaymentType = new DataPaymentType();
         }
 
         public User validateUser (string email, string password)
@@ -33,6 +35,21 @@ namespace BusinessLogicLayer
         {
             dataUser.createUser(user);
         }
+
+        public void SavePaymentType(PaymentType paymentType)
+        {
+            if (paymentType.Id ==0 ) { dataPaymentType.createPaymentType(paymentType); }
+        }
+
+        public List<PaymentType> getAllPaymentTypes()
+        {
+            return dataPaymentType.getAllPaymentTypes();
+        }
+
+
+
+
+
 
     }
 

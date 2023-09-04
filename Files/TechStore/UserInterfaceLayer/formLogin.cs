@@ -21,12 +21,18 @@ namespace UserInterfaceLayer
             if (user == null)
             {
                 MessageBox.Show("Usuario o contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                clearTxts();
             }
 
             else
             {
-                MessageBox.Show(("Bienvenido al sistema: " + user.FirstName + "" + user.LastName + user.Role.Description), "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(("Bienvenido al sistema: " + user.FirstName + " " + user.LastName + ", " + user.Role.Description), "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (user.Role.Description == "Owner") 
+                {
+                    Hide(); //Hides the dialog from formLogin
+                    formOwner ownerPanel = new formOwner(); // New instance for the Owner panel 
+                    ownerPanel.Closed += (s, args) => this.Visible = true; // formLogin dialog reappears when the Owner panel is closed (lambda)
+                    ownerPanel.ShowDialog(); // Shows the dialog for the Owner panel 
+                }
                 clearTxts();
             }
 
