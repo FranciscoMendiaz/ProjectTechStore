@@ -10,46 +10,64 @@ namespace BusinessLogicLayer
         private DataUserRole dataUserRole;
         private DataPaymentType dataPaymentType;
 
-        public BusinessLogic() 
+        public BusinessLogic() // delegates responsibility
         {   
             dataUser = new DataUser();
             dataUserRole = new DataUserRole();
             dataPaymentType = new DataPaymentType();
         }
 
-        public User validateUser (string email, string password)
+        #region USER METHODS
+        public User userLogin (string email, string password) // User logs in using email and password 
         {
             User user = new User();
-            user = dataUser.validateUser(email, password);
+            user = dataUser.getByEmailPassword(email, password);
             return user;
         }
 
-        public User getOne(string email)
+        public User userSignUp(string email, string firstName, string lastName, string password, string address) // user creation
+        {
+            User user = new User();
+            user.Email = email;
+            user.FirstName = firstName;
+            user.LastName = lastName;
+            user.Password = password;
+            user.Address = address;
+            user.Role = dataUserRole.getOne(3);
+            dataUser.create(user);
+            return user;
+        }
+
+        public User getOneUser(string email) // searches a user by their email (PK), before signup 
         {
             User user = new User();
             user = dataUser.getOne(email);
             return user;
         }
+        #endregion
 
-        public void createUser(User user)
+        #region PAYMENT TYPES METHODS
+        public void savePaymentType(PaymentType paymentType)
         {
-            dataUser.createUser(user);
-        }
-
-        public void SavePaymentType(PaymentType paymentType)
-        {
-            if (paymentType.Id ==0 ) { dataPaymentType.createPaymentType(paymentType); }
+            if (paymentType.Id == 0 ) { dataPaymentType.create(paymentType); }
+            else { dataPaymentType.update(paymentType);}
         }
 
         public List<PaymentType> getAllPaymentTypes()
         {
-            return dataPaymentType.getAllPaymentTypes();
+            return dataPaymentType.getAll();
         }
-
-
-
-
-
+        
+        public void deletePaymentType(PaymentType paymentType)
+        {
+            dataPaymentType.delete(paymentType);
+        }
+    
+        public List<PaymentType> filterPaymentTypes(string description)
+        {
+            return dataPaymentType.getByDescription(description);
+        }
+        #endregion
 
     }
 

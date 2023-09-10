@@ -15,14 +15,24 @@ namespace UserInterfaceLayer
     public partial class formSignup : Form
     {
         private BusinessLogic logic;
+        private User user;
+
         public formSignup()
         {
             InitializeComponent();
             logic = new BusinessLogic();
         }
 
-        private User user;
+        private void clearTxts()
+        {
+            txtEmail.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+        }
 
+        #region EVENTS
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -30,10 +40,17 @@ namespace UserInterfaceLayer
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text != string.Empty && txtAdress.Text != string.Empty && txtFirstName.Text != string.Empty
+            onBtnCreateAccountClicked();
+        }
+        #endregion
+
+        #region HANDLERS
+        private void onBtnCreateAccountClicked()
+        {
+            if (txtEmail.Text != string.Empty && txtAddress.Text != string.Empty && txtFirstName.Text != string.Empty
                 && txtLastName.Text != string.Empty && txtPassword.Text != string.Empty)
             {
-                getOne();
+                validateUserEmail();
             }
 
             else
@@ -41,12 +58,14 @@ namespace UserInterfaceLayer
                 MessageBox.Show("Debe ingresar todos los campos solicitados", "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void getOne()
+
+        private void validateUserEmail()
         {
-            user = logic.getOne(txtEmail.Text);
+            user = logic.getOneUser(txtEmail.Text); // validates that there isn´t already an account with the entered email
+
             if (user == null)
             {
-                createUser();
+                userSignUp();
             }
 
             else
@@ -55,27 +74,13 @@ namespace UserInterfaceLayer
             }
         }
 
-        private void createUser()
+        private void userSignUp() // calls the business logic method in order to create the new user
         {
-            user = new User();
-            user.Email = txtEmail.Text;
-            user.FirstName = txtFirstName.Text;
-            user.LastName = txtLastName.Text;
-            user.Password = txtPassword.Text;
-            user.Address = txtAdress.Text;
-            logic.createUser(user);
-            MessageBox.Show("Cuenta de Usuario creada correctamente", "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            user = logic.userSignUp(txtEmail.Text, txtFirstName.Text, txtLastName.Text, txtPassword.Text, txtAddress.Text);
+            MessageBox.Show(("Usuario: " + user.FirstName + " " + user.FirstName + ", " + user.Role.Description + " creado correctamente"), "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
             clearTxts();
         }
-
-        private void clearTxts()
-        {
-            txtEmail.Text = string.Empty;
-            txtPassword.Text = string.Empty;
-            txtAdress.Text = string.Empty;
-            txtFirstName.Text = string.Empty;
-            txtLastName.Text = string.Empty;
-        }
+        #endregion
 
 
 

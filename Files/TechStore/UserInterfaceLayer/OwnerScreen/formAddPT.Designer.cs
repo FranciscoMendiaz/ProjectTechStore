@@ -30,7 +30,7 @@
         {
             groupBox1 = new GroupBox();
             btnCancelNewPT = new Button();
-            btnAcceptNewPT = new Button();
+            btnSavePT = new Button();
             txtNewPT = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -38,7 +38,7 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btnCancelNewPT);
-            groupBox1.Controls.Add(btnAcceptNewPT);
+            groupBox1.Controls.Add(btnSavePT);
             groupBox1.Controls.Add(txtNewPT);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(41, 12);
@@ -59,16 +59,16 @@
             btnCancelNewPT.UseVisualStyleBackColor = true;
             btnCancelNewPT.Click += btnCancel_Click;
             // 
-            // btnAcceptNewPT
+            // btnSavePT
             // 
-            btnAcceptNewPT.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAcceptNewPT.Location = new Point(93, 90);
-            btnAcceptNewPT.Name = "btnAcceptNewPT";
-            btnAcceptNewPT.Size = new Size(77, 34);
-            btnAcceptNewPT.TabIndex = 1;
-            btnAcceptNewPT.Text = "ACEPTAR";
-            btnAcceptNewPT.UseVisualStyleBackColor = true;
-            btnAcceptNewPT.Click += btnAcceptNewPT_Click;
+            btnSavePT.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSavePT.Location = new Point(93, 90);
+            btnSavePT.Name = "btnSavePT";
+            btnSavePT.Size = new Size(77, 34);
+            btnSavePT.TabIndex = 1;
+            btnSavePT.Text = "GUARDAR";
+            btnSavePT.UseVisualStyleBackColor = true;
+            btnSavePT.Click += btnSavePT_Click;
             // 
             // txtNewPT
             // 
@@ -79,6 +79,7 @@
             // 
             // formAddPT
             // 
+            AcceptButton = btnSavePT;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(334, 210);
@@ -94,7 +95,7 @@
         #endregion
         private GroupBox groupBox1;
         private Button btnCancelNewPT;
-        private Button btnAcceptNewPT;
+        private Button btnSavePT;
         private TextBox txtNewPT;
     }
 }

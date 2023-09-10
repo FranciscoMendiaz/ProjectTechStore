@@ -91,10 +91,10 @@ C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInte
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formSignup.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwner.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerBrands.resources
-C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerCategories.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerCustomers.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerPaymentTypes.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerProducts.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.Properties.Resources.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerHome.resources
 C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formAddPT.resources
+C:\Users\Francisco\OneDrive\Documentos\ProjectTechStore\Files\TechStore\UserInterfaceLayer\obj\Debug\net6.0-windows\UserInterfaceLayer.formOwnerShippingPrices.resources

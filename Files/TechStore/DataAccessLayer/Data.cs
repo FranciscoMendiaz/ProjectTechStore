@@ -24,7 +24,7 @@ namespace DataAccessLayer
 
         private Data()
         {
-            myConn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Tech-Store;Data Source=DESKTOP-SLFI33K\\SQLEXPRESS;MultipleActiveResultSets=true");
+            myConn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Tech-Store;Data Source=DESKTOP-SLFI33K\\SQLEXPRESS");
         }
 
         public SqlConnection getMyConn()
@@ -41,7 +41,7 @@ namespace DataAccessLayer
             {
                 throw;
             }
-            connected++; ;
+            connected++; 
             return myConn;
         }
 

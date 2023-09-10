@@ -13,7 +13,7 @@
     <Compile Update="OwnerScreen\formOwnerBrands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OwnerScreen\formOwnerCategories.cs">
+    <Compile Update="OwnerScreen\formOwnerShippingPrices.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="OwnerScreen\formOwnerCustomers.cs">

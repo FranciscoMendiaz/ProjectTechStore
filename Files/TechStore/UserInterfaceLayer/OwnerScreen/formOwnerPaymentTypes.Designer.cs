@@ -38,7 +38,10 @@
             btnAddPT = new Button();
             btnUpdatePT = new Button();
             btnDeletePT = new Button();
-            label2 = new Label();
+            btnRefresh = new Button();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            toolTipSearch = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridPaymentTypes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)paymentTypeBindingSource).BeginInit();
@@ -71,7 +74,7 @@
             gridPaymentTypes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridPaymentTypes.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn });
             gridPaymentTypes.DataSource = paymentTypeBindingSource;
-            gridPaymentTypes.Location = new Point(12, 36);
+            gridPaymentTypes.Location = new Point(12, 75);
             gridPaymentTypes.Name = "gridPaymentTypes";
             gridPaymentTypes.RowTemplate.Height = 25;
             gridPaymentTypes.Size = new Size(322, 344);
@@ -106,7 +109,7 @@
             // 
             // btnUpdatePT
             // 
-            btnUpdatePT.Location = new Point(390, 102);
+            btnUpdatePT.Location = new Point(390, 108);
             btnUpdatePT.Name = "btnUpdatePT";
             btnUpdatePT.Size = new Size(200, 30);
             btnUpdatePT.TabIndex = 5;
@@ -118,28 +121,56 @@
             // 
             btnDeletePT.BackColor = Color.Red;
             btnDeletePT.ForeColor = Color.White;
-            btnDeletePT.Location = new Point(390, 163);
+            btnDeletePT.Location = new Point(390, 180);
             btnDeletePT.Name = "btnDeletePT";
             btnDeletePT.Size = new Size(200, 30);
             btnDeletePT.TabIndex = 6;
             btnDeletePT.Text = "ELIMINAR FORMA DE PAGO";
             btnDeletePT.UseVisualStyleBackColor = false;
+            btnDeletePT.Click += btnDeletePT_Click;
             // 
-            // label2
+            // btnRefresh
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 400);
-            label2.Name = "label2";
-            label2.Size = new Size(340, 15);
-            label2.TabIndex = 7;
-            label2.Text = "VUELVA A PRESIONAR 'FORMAS DE PAGO' PARA VER CAMBIOS";
+            btnRefresh.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRefresh.Location = new Point(12, 36);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(34, 30);
+            btnRefresh.TabIndex = 7;
+            btnRefresh.Text = "↻";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(52, 36);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(226, 23);
+            txtSearch.TabIndex = 8;
+            toolTipSearch.SetToolTip(txtSearch, "Buscar Forma de pago por descripción\r\n");
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(284, 36);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(50, 30);
+            btnSearch.TabIndex = 9;
+            btnSearch.Text = "🔍︎";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // toolTipSearch
+            // 
+            toolTipSearch.IsBalloon = true;
             // 
             // formOwnerPaymentTypes
             // 
+            AcceptButton = btnSearch;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
+            Controls.Add(btnSearch);
+            Controls.Add(txtSearch);
+            Controls.Add(btnRefresh);
             Controls.Add(btnDeletePT);
             Controls.Add(btnUpdatePT);
             Controls.Add(btnAddPT);
@@ -168,6 +199,9 @@
         private BindingSource paymentTypeBindingSource;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private Label label2;
+        private Button btnRefresh;
+        private TextBox txtSearch;
+        private Button btnSearch;
+        private ToolTip toolTipSearch;
     }
 }

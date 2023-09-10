@@ -11,14 +11,13 @@ namespace DataAccessLayer
 {
     public class DataUser
     {
-        #region VALIDATE USER
-        public User validateUser(string email, string password)
+        #region GET BY EMAIL & PASSWORD
+        public User getByEmailPassword(string email, string password)
         {
-            
             User user = new User();
             DataUserRole role = new DataUserRole();
+            int idUserRole = 0;
             
-
             try
             {
                 string query = @"SELECT users.email, users.password, users.first_name, users.last_name, users.address, users.id_user_role FROM users 
@@ -40,7 +39,7 @@ namespace DataAccessLayer
                             user.LastName = reader["last_name"].ToString();
                             user.FirstName = reader["first_name"].ToString();
                             user.Address = reader["address"].ToString();
-                            user.Role = role.getRole(int.Parse(reader["id_user_role"].ToString()));
+                            idUserRole = int.Parse(reader["id_user_role"].ToString());
                         }
 
                         else
@@ -52,17 +51,18 @@ namespace DataAccessLayer
             }
             catch (Exception) { throw; }
             
-            finally { Data.getInstance().releaseMyConn(); }
-            
+            finally 
+            { 
+                Data.getInstance().releaseMyConn();
+                if (user != null) { user.Role = role.getOne(idUserRole); }
+            }
             return user;
-
         }
         #endregion
 
-        #region GETONE
+        #region GET ONE
         public User getOne(string email)
         {
-
             User user = new User();
             DataUserRole role = new DataUserRole();
             int idUserRole = 0;
@@ -74,7 +74,6 @@ namespace DataAccessLayer
 
                 SqlParameter mail = new SqlParameter("@Email", email);
                 
-
                 using (SqlCommand command = new SqlCommand(query, Data.getInstance().getMyConn()))
                 {
                     command.Parameters.Add(mail);
@@ -88,7 +87,7 @@ namespace DataAccessLayer
                             user.LastName = reader["last_name"].ToString();
                             user.FirstName = reader["first_name"].ToString();
                             user.Address = reader["address"].ToString();
-                            user.Role = role.getRole(int.Parse(reader["id_user_role"].ToString()));
+                            idUserRole = int.Parse(reader["id_user_role"].ToString());
                         }
 
                         else
@@ -100,21 +99,23 @@ namespace DataAccessLayer
             }
             catch (Exception) { throw; }
 
-            finally { Data.getInstance().releaseMyConn(); }
-
+            finally 
+            { 
+                Data.getInstance().releaseMyConn();
+                if (user != null) { user.Role = role.getOne(idUserRole);}
+            }
             return user;
-
         }
         #endregion
 
-        #region CREATE USER
-        public void createUser(User user)
+        #region CREATE 
+        public void create(User user)
         {
 
             try
             {
                 string query = @"INSERT INTO users (email, first_name, last_name, password, address, id_user_role)
-                                VALUES(@Email, @First_name, @Last_name, @Password, @Address, 3)";
+                                VALUES(@Email, @First_name, @Last_name, @Password, @Address, @Id_User_Role)";
 
 
                 SqlParameter mail = new SqlParameter("@Email", user.Email);
@@ -122,6 +123,7 @@ namespace DataAccessLayer
                 SqlParameter lastName = new SqlParameter("@Last_name", user.LastName);
                 SqlParameter pass = new SqlParameter("@Password", user.Password);
                 SqlParameter address = new SqlParameter("@Address", user.Address);
+                SqlParameter idUserRole = new SqlParameter("@Id_User_Role", user.Role.Id);
 
 
                 using (SqlCommand command = new SqlCommand(query, Data.getInstance().getMyConn()))
@@ -131,6 +133,7 @@ namespace DataAccessLayer
                     command.Parameters.Add(lastName);
                     command.Parameters.Add(pass);
                     command.Parameters.Add(address);
+                    command.Parameters.Add(idUserRole);
 
                     command.ExecuteNonQuery();
                 }

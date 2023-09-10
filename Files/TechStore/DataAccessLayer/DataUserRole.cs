@@ -10,8 +10,8 @@ namespace DataAccessLayer
 {
     public class DataUserRole
     {
-        #region GET ROLE
-        public UserRole getRole(int idRole)
+        #region GET ONE
+        public UserRole getOne(int idRole)
         {
             UserRole role = new UserRole();
             try

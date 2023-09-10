@@ -37,7 +37,7 @@
             txtPassword = new TextBox();
             txtFirstName = new TextBox();
             txtLastName = new TextBox();
-            txtAdress = new TextBox();
+            txtAddress = new TextBox();
             label6 = new Label();
             btnCreateAccount = new Button();
             btnCancel = new Button();
@@ -116,12 +116,12 @@
             txtLastName.Size = new Size(208, 23);
             txtLastName.TabIndex = 8;
             // 
-            // txtAdress
+            // txtAddress
             // 
-            txtAdress.Location = new Point(127, 233);
-            txtAdress.Name = "txtAdress";
-            txtAdress.Size = new Size(208, 23);
-            txtAdress.TabIndex = 9;
+            txtAddress.Location = new Point(127, 233);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(208, 23);
+            txtAddress.TabIndex = 9;
             // 
             // label6
             // 
@@ -154,6 +154,7 @@
             // 
             // formSignup
             // 
+            AcceptButton = btnCreateAccount;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(444, 373);
@@ -161,7 +162,7 @@
             Controls.Add(btnCancel);
             Controls.Add(btnCreateAccount);
             Controls.Add(label6);
-            Controls.Add(txtAdress);
+            Controls.Add(txtAddress);
             Controls.Add(txtLastName);
             Controls.Add(txtFirstName);
             Controls.Add(txtPassword);
@@ -188,7 +189,7 @@
         private TextBox txtPassword;
         private TextBox txtFirstName;
         private TextBox txtLastName;
-        private TextBox txtAdress;
+        private TextBox txtAddress;
         private Label label6;
         private Button btnCreateAccount;
         private Button btnCancel;

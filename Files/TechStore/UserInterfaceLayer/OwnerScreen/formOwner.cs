@@ -40,9 +40,9 @@ namespace UserInterfaceLayer
             loadform(new formOwnerProducts());
         }
 
-        private void btnCategories_Click(object sender, EventArgs e)
+        private void btnShippingPrices_Click(object sender, EventArgs e)
         {
-            loadform(new formOwnerCategories());
+            loadform(new formOwnerShippingPrices());
         }
 
         private void btnBrands_Click(object sender, EventArgs e)
@@ -70,6 +70,8 @@ namespace UserInterfaceLayer
             Close();
         }
         #endregion
+
+        
     }
 }
 

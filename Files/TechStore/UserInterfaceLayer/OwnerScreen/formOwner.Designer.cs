@@ -37,7 +37,7 @@
             btnProducts = new Button();
             btnBrands = new Button();
             panelMain = new Panel();
-            btnCategories = new Button();
+            btnShippingPrices = new Button();
             panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnLogoHome).BeginInit();
             SuspendLayout();
@@ -51,7 +51,7 @@
             panelSide.Controls.Add(btnCustomers);
             panelSide.Controls.Add(btnProducts);
             panelSide.Controls.Add(btnBrands);
-            panelSide.Controls.Add(btnCategories);
+            panelSide.Controls.Add(btnShippingPrices);
             panelSide.Dock = DockStyle.Left;
             panelSide.Location = new Point(0, 0);
             panelSide.Name = "panelSide";
@@ -144,18 +144,18 @@
             panelMain.Size = new Size(708, 563);
             panelMain.TabIndex = 2;
             // 
-            // btnCategories
+            // btnShippingPrices
             // 
-            btnCategories.BackColor = SystemColors.Highlight;
-            btnCategories.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCategories.ForeColor = Color.White;
-            btnCategories.Location = new Point(0, 152);
-            btnCategories.Name = "btnCategories";
-            btnCategories.Size = new Size(200, 30);
-            btnCategories.TabIndex = 1;
-            btnCategories.Text = "CATEGORIAS";
-            btnCategories.UseVisualStyleBackColor = false;
-            btnCategories.Click += btnCategories_Click;
+            btnShippingPrices.BackColor = SystemColors.Highlight;
+            btnShippingPrices.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnShippingPrices.ForeColor = Color.White;
+            btnShippingPrices.Location = new Point(0, 152);
+            btnShippingPrices.Name = "btnShippingPrices";
+            btnShippingPrices.Size = new Size(200, 30);
+            btnShippingPrices.TabIndex = 1;
+            btnShippingPrices.Text = "PRECIOS DE ENVÍO";
+            btnShippingPrices.UseVisualStyleBackColor = false;
+            btnShippingPrices.Click += btnShippingPrices_Click;
             // 
             // formOwner
             // 
@@ -183,6 +183,6 @@
         private Button btnBrands;
         private Panel panelMain;
         private PictureBox btnLogoHome;
-        private Button btnCategories;
+        private Button btnShippingPrices;
     }
 }

@@ -16,36 +16,12 @@ namespace UserInterfaceLayer
     public partial class formAddPT : Form
     {
         private BusinessLogic logic;
-        private PaymentType paymentType;
+        private PaymentType _paymentType;
 
         public formAddPT()
         {
             InitializeComponent();
             logic = new BusinessLogic();
-
-        }
-
-        private void btnAcceptNewPT_Click(object sender, EventArgs e)
-        {
-            SavePaymentType();
-            this.Close();
-        }
-
-        private void SavePaymentType()
-        {
-            PaymentType paymentType = new PaymentType();
-            paymentType.Description = txtNewPT.Text;
-            logic.SavePaymentType(paymentType);
-        }
-
-        public void LoadPaymentType(PaymentType pt)
-        {
-            paymentType = pt;
-            if (pt != null) 
-            {
-                clearTxts();
-                txtNewPT.Text = pt.Description;
-            }
         }
 
         private void clearTxts()
@@ -53,23 +29,51 @@ namespace UserInterfaceLayer
             txtNewPT.Text = string.Empty;
         }
 
+        public void LoadPaymentType(PaymentType paymentType)
+        {
+            _paymentType = paymentType;
+            if (paymentType != null)
+            {
+                clearTxts();
+                txtNewPT.Text = paymentType.Description;
+            }
+        }
 
-
-
-
-
-
-
-
-
-
-
+        #region EVENTS
+        private void btnSavePT_Click(object sender, EventArgs e)
+        {
+            savePaymentType();
+            Close();
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
-        
+        #region HANDLERS
+        private void savePaymentType()
+        {
+            PaymentType paymentType = new PaymentType();
+            if (txtNewPT.Text != string.Empty)
+            {
+                paymentType.Description = txtNewPT.Text;
+                paymentType.Id = _paymentType != null ? _paymentType.Id : 0;
+                logic.savePaymentType(paymentType);
+            }
+
+            else
+            {
+                MessageBox.Show("Debe ingresar todos los campos solicitados", "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+
+
+
+
+
+
     }
 }
