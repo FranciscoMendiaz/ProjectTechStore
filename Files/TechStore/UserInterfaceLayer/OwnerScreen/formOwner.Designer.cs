@@ -36,8 +36,8 @@
             btnCustomers = new Button();
             btnProducts = new Button();
             btnBrands = new Button();
-            panelMain = new Panel();
             btnShippingPrices = new Button();
+            panelMain = new Panel();
             panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnLogoHome).BeginInit();
             SuspendLayout();
@@ -76,7 +76,7 @@
             btnLogOut.FlatStyle = FlatStyle.Flat;
             btnLogOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOut.ForeColor = Color.White;
-            btnLogOut.Location = new Point(3, 530);
+            btnLogOut.Location = new Point(0, 506);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.Size = new Size(200, 30);
             btnLogOut.TabIndex = 5;
@@ -136,14 +136,6 @@
             btnBrands.UseVisualStyleBackColor = false;
             btnBrands.Click += btnBrands_Click;
             // 
-            // panelMain
-            // 
-            panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(200, 0);
-            panelMain.Name = "panelMain";
-            panelMain.Size = new Size(708, 563);
-            panelMain.TabIndex = 2;
-            // 
             // btnShippingPrices
             // 
             btnShippingPrices.BackColor = SystemColors.Highlight;
@@ -156,6 +148,14 @@
             btnShippingPrices.Text = "PRECIOS DE ENVÍO";
             btnShippingPrices.UseVisualStyleBackColor = false;
             btnShippingPrices.Click += btnShippingPrices_Click;
+            // 
+            // panelMain
+            // 
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(200, 0);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(708, 563);
+            panelMain.TabIndex = 2;
             // 
             // formOwner
             // 
