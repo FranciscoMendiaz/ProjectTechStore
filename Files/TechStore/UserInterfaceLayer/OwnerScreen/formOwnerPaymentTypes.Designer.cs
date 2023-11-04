@@ -103,7 +103,7 @@
             btnAddPT.Name = "btnAddPT";
             btnAddPT.Size = new Size(200, 30);
             btnAddPT.TabIndex = 4;
-            btnAddPT.Text = "AÑADIR FORMA DE PAGO";
+            btnAddPT.Text = "AÑADIR UNA FORMA DE PAGO";
             btnAddPT.UseVisualStyleBackColor = true;
             btnAddPT.Click += btnAddPT_Click;
             // 
